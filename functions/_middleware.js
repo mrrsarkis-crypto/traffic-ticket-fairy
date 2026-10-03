@@ -1,9 +1,12 @@
 // Cloudflare Pages Functions middleware
 
 const ADSENSE_ACCOUNT = 'ca-pub-FAIRY_ADSENSE_ID';
+const GA4_ID = 'G-V4V58680EZ';
 const CONSENT_DEFAULT_SCRIPT = '<script>(function(){var k="uttAdConsent",s=null;try{s=localStorage.getItem(k)}catch(e){}var v=(s==="granted")?"granted":"denied";window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;var c={ad_storage:v,ad_user_data:v,ad_personalization:v,analytics_storage:v,functionality_storage:v,personalization_storage:v,security_storage:v};if(s===null)c.wait_for_update=500;gtag("consent","default",c)})();</script>';
+const GA4_SCRIPT = '<script async src="https://www.googletagmanager.com/gtag/js?id=' + GA4_ID + '"></script><script>window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};gtag("js",new Date());gtag("config","' + GA4_ID + '");</script>';
 const CONSENT_BANNER_SCRIPT = '<script src="/consent-banner.js?v=20261004" defer></script>';
 const CONSENT_MARKER = 'uttAdConsent';
+const GA4_MARKER = 'G-V4V58680EZ';
 const CONSENT_BANNER_MARKER = '/consent-banner.js';
 const ADSENSE_META = '<meta name="google-adsense-account" content="' + ADSENSE_ACCOUNT + '">';
 const SERVICE_VIEW_TRACKING_SCRIPT = '<script src="/service-view-tracking.js" defer></script>';
@@ -105,6 +108,10 @@ export async function onRequest(context) {
     html = html.replace(/<script[^>]+pagead\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
     if (monetized && !html.includes('google-adsense-account')) html = insertAfterHeadOpen(html, ADSENSE_META);
     if (monetized && !html.includes(CONSENT_MARKER)) html = insertAfterHeadOpen(html, CONSENT_DEFAULT_SCRIPT);
+    // GA4 is intentionally loaded even while analytics_storage is denied.
+    // Consent Mode blocks storage/measurement until the visitor grants it,
+    // while the Google tag remains discoverable by Analytics verification.
+    if (monetized && !html.includes(GA4_MARKER)) html = insertAfterHeadOpen(html, GA4_SCRIPT);
     if (monetized && !html.includes(CONSENT_BANNER_MARKER)) html = insertBeforeHeadClose(html, CONSENT_BANNER_SCRIPT);
     if (monetized && !html.includes(SERVICE_VIEW_MARKER)) html = insertBeforeHeadClose(html, SERVICE_VIEW_TRACKING_SCRIPT);
 
