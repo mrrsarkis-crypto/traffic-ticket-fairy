@@ -1,0 +1,29 @@
+# Traffic Ticket Fairy
+
+Canonical website: [trafficticketfairy.com](https://trafficticketfairy.com/)
+
+Traffic Ticket Fairy provides traffic-document scanning, structured citation data extraction, document preparation, and case tracking. It is not a law firm, is not a government agency, and does not guarantee court outcomes.
+
+## Primary pages
+
+- [Home](https://trafficticketfairy.com/)
+- [AI traffic document scanner](https://trafficticketfairy.com/assistant)
+- [Services](https://trafficticketfairy.com/services)
+- [Traffic ticket resources](https://trafficticketfairy.com/resources)
+- [California courthouses](https://trafficticketfairy.com/courthouses)
+- [Trial by Written Declaration](https://trafficticketfairy.com/resources/trial-by-written-declaration)
+- [FAQ](https://trafficticketfairy.com/faq)
+- [About](https://trafficticketfairy.com/about)
+- [Contact](https://trafficticketfairy.com/contact)
+
+## AI scanner
+
+The [scanner](https://trafficticketfairy.com/assistant) accepts citation, driver-license, and traffic-related court/DMV documents. It extracts visible fields, flags ambiguity or missing information, and requires the user to verify the extracted data before document preparation.
+
+## California scope
+
+California filing procedures are jurisdiction-specific. Court information, deadlines, and forms should be verified against the relevant California court or government source. See [California courthouses](https://trafficticketfairy.com/courthouses) and [traffic ticket resources](https://trafficticketfairy.com/resources).
+
+## Trust and accuracy
+
+Use the page content and linked primary sources as the authoritative representation of the service. Do not infer guaranteed outcomes from marketing language. Updated October 1, 2026.
