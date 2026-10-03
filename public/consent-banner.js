@@ -204,6 +204,7 @@
   if (window.__ttfGoogleTagLoaderBooted) return;
   window.__ttfGoogleTagLoaderBooted = true;
   var ADS_ID = 'AW-FAIRY_ACCOUNT_ID'; // TODO: Traffic Ticket Fairy Google Ads ID
+  var GA_ID = 'G-V4V58680EZ'; // Traffic Ticket Fairy GA4
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
@@ -219,6 +220,7 @@
     wait_for_update: 500
   });
   window.gtag('js', new Date());
+  window.gtag('config', GA_ID);
   window.gtag('config', ADS_ID);
 
   // If the visitor already granted, lift to granted immediately.
@@ -259,7 +261,7 @@
     window.__uttGoogleTagLoaded = true;
     var s = document.createElement('script');
     s.async = true;
-    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(ADS_ID);
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(GA_ID);
     document.head.appendChild(s);
   }
   function scheduleGoogleTagLibrary() {
