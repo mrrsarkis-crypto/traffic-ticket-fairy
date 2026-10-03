@@ -1,0 +1,6 @@
+{
+  "resource": "https://trafficticketfairy.com",
+  "authorization_servers": ["https://trafficticketfairy.com"],
+  "scopes_supported": ["agent", "cases:read", "cases:write"],
+  "service_documentation": "https://trafficticketfairy.com/auth.md"
+}
