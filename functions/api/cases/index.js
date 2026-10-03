@@ -16,7 +16,7 @@ import { caseAccessToken, json, listRecords, normalizeStripeSecret, priceFor, ra
 // If a session cannot be created and the fallback is not permitted, the request
 // fails loudly instead of charging anyone.
 const FALLBACK_PAYMENT_LINKS = {
-  '199': 'FAIRY_STRIPE_PAYMENT_LINK', // TODO: Traffic Ticket Fairy $199 payment link
+  '199': 'https://buy.stripe.com/00w4gB0lS4R30ZF3CM6J200',
 };
 
 // The UI quotes a fixed price per service, so a Checkout Session that resolves
