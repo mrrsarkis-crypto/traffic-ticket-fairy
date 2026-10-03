@@ -36,7 +36,7 @@
   }
 
   function removeBanner() {
-    var el = document.getElementById('uttAdConsentBanner');
+    var el = document.getElementById('ttfAdConsentBanner');
     if (el) el.remove();
   }
 
@@ -53,9 +53,9 @@
   }
 
   function renderReopenControl() {
-    if (document.getElementById('uttAdConsentReopen')) return;
+    if (document.getElementById('ttfAdConsentReopen')) return;
     var btn = button('Ad preferences', false);
-    btn.id = 'uttAdConsentReopen';
+    btn.id = 'ttfAdConsentReopen';
     btn.style.cssText = btn.style.cssText.replace('flex:1 1 0;min-width:120px;', 'flex:0 0 auto;');
     btn.style.cssText += 'position:fixed;left:12px;bottom:12px;z-index:2147482998;opacity:.75;';
     btn.setAttribute('aria-label', 'Change your advertising preferences');
@@ -70,7 +70,7 @@
   function renderBanner() {
     removeBanner();
     var el = document.createElement('div');
-    el.id = 'uttAdConsentBanner';
+    el.id = 'ttfAdConsentBanner';
     el.setAttribute('role', 'dialog');
     el.setAttribute('aria-label', 'Cookie and advertising preferences');
     el.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:2147482999;' +
