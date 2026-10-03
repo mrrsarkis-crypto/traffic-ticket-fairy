@@ -72,8 +72,8 @@ export function normalizeStripeSecret(value) {
 // secret fails with resource_missing.
 const DEFAULT_PRICE_IDS = {
   '199': 'price_1ULxHcPxOCEZhKkdbtvJeljt', // Traffic Ticket Fairy $199
-  '149': 'price_1UHw6DLMSqKARRUqDTK6w7LB',
-  '99': 'price_1UHw6FLMSqKARRUqJ8vVNoCr',
+  '149': 'price_1UMT3YPxOCEZhKkdVqYGbSOz', // Traffic Ticket Fairy $149
+  '99': 'price_1UMT3bPxOCEZhKkdhweVUxI8', // Traffic Ticket Fairy $99
 };
 
 export function priceFor(service, env) {
