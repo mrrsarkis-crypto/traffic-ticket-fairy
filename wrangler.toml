@@ -1,0 +1,29 @@
+# Cloudflare Pages deployment via Wrangler.
+# The static site lives in /public and Functions live in /functions.
+# Bindings below mirror the intended live project configuration so Pages
+# Functions receive CASES and R2 bindings.
+# Runtime secrets are NOT stored in this file. Configure them in the Cloudflare
+# dashboard (Workers & Pages > ticket-fighter > Settings > Environment Variables).
+#
+# Required runtime secrets/variables include:
+#   STRIPE_SECRET_KEY, STRIPE_PRICE_199/299/999, STRIPE_WEBHOOK_SECRET,
+#   STRIPE_SUCCESS_URL, STRIPE_CANCEL_URL, (optional) SEND_EMAIL_URL, SEND_EMAIL_AUTH
+#   ANTHROPIC_API_KEY, (optional) ANTHROPIC_MODEL
+#
+# Keep the compatibility date pinned deliberately. Update it only after the
+# Pages runtime has been tested against the application.
+name = "ticket-fighter"
+pages_build_output_dir = "public"
+
+compatibility_date = "2025-07-18"
+
+[ai]
+binding = "AI"
+
+[[kv_namespaces]]
+binding = "CASES"
+id = "9a4dddc310f2406a86f9e3c3da65565d"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "united-cases"
