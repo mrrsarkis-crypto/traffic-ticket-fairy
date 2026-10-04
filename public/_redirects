@@ -1,3 +1,8 @@
+# Fairy logos now use United's shield logo for brand consistency (2026-10-04)
+/assets/logo-fairy.webp https://unitedtraffictickets.com/assets/logo-defense.webp 302
+/assets/logo-fairy-160.webp https://unitedtraffictickets.com/assets/logo-defense.webp 302
+/assets/logo-light.webp https://unitedtraffictickets.com/assets/logo-defense.webp 302
+
 # Redirects for legacy ad/SEO URLs (many were 404ing, causing "Destination not working" ad disapprovals)
 # Added 2026-10-02 — maps old Google Ads landing pages to live equivalents
 
