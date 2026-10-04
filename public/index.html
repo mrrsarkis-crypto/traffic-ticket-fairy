@@ -145,7 +145,18 @@
 .trust-stars{color:#f59e0b;font-size:22px;letter-spacing:2px;margin-bottom:8px;}
 .hero-trust-reviews p{font-size:13px;color:#57534e;margin:0 0 12px;}
 .hero-trust-reviews .btn{font-size:13px;padding:10px 20px;}
-@media(max-width:768px){.hero-trust{margin:20px auto 0;}}
+.ff-pedestal{background:#0d0721;color:#fff;padding:110px 0;position:relative;overflow:hidden}
+.pedestal-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.pedestal-img img{width:100%;border-radius:24px;box-shadow:0 24px 80px #000c}
+.pedestal-text h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;margin-bottom:24px;text-align:left}
+.pedestal-text .eyebrow{text-align:left}
+.pedestal-text p{color:#c9bfe0;margin-bottom:20px;font-size:1.1rem}
+.pedestal-stats{display:flex;gap:40px;margin-top:32px}
+.pedestal-stats div{text-align:center}
+.pedestal-stats strong{display:block;font-size:2rem;color:var(--gold-l)}
+.pedestal-stats span{color:#8f86a8;font-size:.9rem}
+@media(max-width:768px){.pedestal-grid{grid-template-columns:1fr}
+{.hero-trust{margin:20px auto 0;}}
 </style>
 <style>
 .footer-social{margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);}
@@ -279,6 +290,26 @@
   </div>
 </section>
 
+<!-- THE PEDESTAL -->
+<section class="ff-pedestal">
+  <div class="wrap pedestal-grid">
+    <div class="pedestal-img">
+      <img src="/assets/fairy-pedestal.webp" alt="The Traffic Ticket Fairy — marble statue on pedestal" loading="lazy">
+    </div>
+    <div class="pedestal-text">
+      <p class="eyebrow">✨ Ten Years in the Making</p>
+      <h2>She Belongs on a <span class="gold">Pedestal</span></h2>
+      <p>Some ideas take a decade to find their moment. The Traffic Ticket Fairy was dreamed up ten years ago — and today she stands tall: an AI-powered guardian for every California driver with a ticket in their hand and hope in their heart.</p>
+      <p>She doesn't wear a suit. She doesn't bill by the hour. She waves her wand — and your ticket gets the fight it deserves.</p>
+      <div class="pedestal-stats">
+        <div><strong>11+</strong><span>Years of Trust</span></div>
+        <div><strong>58</strong><span>CA Counties</span></div>
+        <div><strong>100%</strong><span>Heart</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- FINAL CTA -->
 <section class="ff-final">
   <div class="wrap">
@@ -404,7 +435,18 @@ body{font-family:Inter,system-ui,sans-serif;color:var(--ink);line-height:1.6}
 .ff-footer a{color:#b9aecf;text-decoration:none;display:block;margin-bottom:10px}
 .ff-footer a:hover{color:var(--gold-l)}
 .copy{text-align:center;border-top:1px solid #ffffff14;padding-top:28px;font-size:.9rem}
-@media(max-width:768px){.cine-links{display:none}.footer-grid{grid-template-columns:1fr}.price-card.hot{transform:none}}
+.ff-pedestal{background:#0d0721;color:#fff;padding:110px 0;position:relative;overflow:hidden}
+.pedestal-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.pedestal-img img{width:100%;border-radius:24px;box-shadow:0 24px 80px #000c}
+.pedestal-text h2{font-size:clamp(2rem,4vw,2.8rem);font-weight:800;margin-bottom:24px;text-align:left}
+.pedestal-text .eyebrow{text-align:left}
+.pedestal-text p{color:#c9bfe0;margin-bottom:20px;font-size:1.1rem}
+.pedestal-stats{display:flex;gap:40px;margin-top:32px}
+.pedestal-stats div{text-align:center}
+.pedestal-stats strong{display:block;font-size:2rem;color:var(--gold-l)}
+.pedestal-stats span{color:#8f86a8;font-size:.9rem}
+@media(max-width:768px){.pedestal-grid{grid-template-columns:1fr}
+{.cine-links{display:none}.footer-grid{grid-template-columns:1fr}.price-card.hot{transform:none}}
 </style>
 <script>
 // Time-aware greeting
