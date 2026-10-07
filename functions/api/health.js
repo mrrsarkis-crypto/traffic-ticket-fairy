@@ -75,7 +75,7 @@ export async function onRequestGet(context) {
 
   return new Response(JSON.stringify({
     ok,
-    service: 'united-traffic-tickets-defense',
+    service: 'traffic-ticket-fairy',
     platform,
     missing: safeMissing,
     bindings: {
