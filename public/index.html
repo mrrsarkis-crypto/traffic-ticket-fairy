@@ -394,7 +394,8 @@ body{font-family:Inter,system-ui,sans-serif;color:var(--ink);line-height:1.6}
 .cine-nav{position:relative;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 32px}
 .cine-brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem}
 .cine-brand em{font-style:normal;color:var(--gold-l)}
-.cine-brand img{border-radius:12px}
+.cine-brand img{border-radius:12px;animation:fairy-twirl 6s ease-in-out infinite}
+@keyframes fairy-twirl{0%,88%,100%{transform:rotate(0deg)}92%{transform:rotate(360deg)}96%{transform:rotate(360deg)}}
 .cine-links{display:flex;gap:28px}
 .cine-links a{color:#e8e2f5;text-decoration:none;font-size:.95rem;font-weight:500}
 .cine-links a:hover{color:var(--gold-l)}
