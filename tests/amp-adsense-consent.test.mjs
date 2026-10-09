@@ -13,7 +13,7 @@ const ampFiles = fs
   .filter((f) => f.toLowerCase().endsWith('.html'))
   .sort();
 
-const PUBLISHER = 'ca-pub-FAIRY_ADSENSE_ID';
+const PUBLISHER = 'ca-pub-9943048295609395';
 
 test('amp pages exist and are a non-empty set', () => {
   assert.ok(ampFiles.length > 0, 'expected at least one AMP page');

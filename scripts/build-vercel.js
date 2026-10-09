@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const sourceDir = path.join(root, 'public');
 const outDir = path.join(root, 'dist');
-const publisher = 'ca-pub-FAIRY_ADSENSE_ID';
+const publisher = 'ca-pub-9943048295609395';
 const adsenseTag = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${publisher}"
      crossorigin="anonymous"></script>`;
 const accountMeta = `<meta name="google-adsense-account" content="${publisher}">`;

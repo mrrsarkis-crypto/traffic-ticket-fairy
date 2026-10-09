@@ -221,7 +221,7 @@ test('the AdSense tag is baked into the static HTML, not only injected at the ed
     const html = fs.readFileSync(file, 'utf8');
     const base = path.basename(file);
     const isAmp = file.replaceAll('\\', '/').includes('/amp/');
-    const hasTag = html.includes('adsbygoogle.js?client=ca-pub-FAIRY_ADSENSE_ID');
+    const hasTag = html.includes('adsbygoogle.js?client=ca-pub-9943048295609395');
     const hasAmpTag = html.includes('amp-auto-ads');
 
     if (AD_FREE.has(base.replace(/\.html$/, ''))) {
