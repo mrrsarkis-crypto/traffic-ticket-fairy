@@ -1,6 +1,6 @@
 // Cloudflare Pages Functions middleware
 
-const ADSENSE_ACCOUNT = 'ca-pub-FAIRY_ADSENSE_ID';
+const ADSENSE_ACCOUNT = 'ca-pub-9943048295609395';
 const GA4_ID = 'G-V4V58680EZ';
 const CONSENT_DEFAULT_SCRIPT = '<script>(function(){var k="uttAdConsent",s=null;try{s=localStorage.getItem(k)}catch(e){}var v=(s==="granted")?"granted":"denied";window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;var c={ad_storage:v,ad_user_data:v,ad_personalization:v,analytics_storage:v,functionality_storage:v,personalization_storage:v,security_storage:v};if(s===null)c.wait_for_update=500;gtag("consent","default",c)})();</script>';
 const GA4_SCRIPT = '<script async src="https://www.googletagmanager.com/gtag/js?id=' + GA4_ID + '"></script><script>window.dataLayer=window.dataLayer||[];window.gtag=window.gtag||function(){window.dataLayer.push(arguments)};gtag("js",new Date());gtag("config","' + GA4_ID + '");</script>';
