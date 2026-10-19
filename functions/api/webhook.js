@@ -335,7 +335,7 @@ async function sendConfirmationEmail(email, trackingCode, env, docs) {
         text: 'Thank you for your payment of $' + fee + ' (case ' + trackingCode + ').\n\n' +
           'Your completed Trial by Written Declaration (TR-205) is attached, along with the Retainer Agreement and Receipt. Please review the TR-205 carefully before any filing step.\n' +
           'Open your private Case Center here: ' + caseUrl + '.\n\n' +
-          'If you have any questions, call (818) 205-8271.',
+          'If you have any questions, call (424) 450-6387.',
         attachments,
       });
       return;
