@@ -22,7 +22,7 @@ If you had a great experience, we'd love your review — it helps other Californ
 Thank you for trusting the Fairy! 🧚
 
 — The Traffic Ticket Fairy Team
-(424) 450-6387 | fairy@utt-d.com
+(424) 450-6387 | trafficticketfairy@gmail.com
 
 ## In-person / phone ask
 "Hey {{name}}, glad we got that sorted for you! If you have 60 seconds, a Google review would mean the world to us — it helps other drivers find us. I can text you the link right now?"
