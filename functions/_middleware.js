@@ -9,6 +9,8 @@ const CONSENT_MARKER = 'uttAdConsent';
 const GA4_MARKER = 'G-V4V58680EZ';
 const CONSENT_BANNER_MARKER = '/consent-banner.js';
 const ADSENSE_META = '<meta name="google-adsense-account" content="' + ADSENSE_ACCOUNT + '">';
+const ADSENSE_LOADER = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=' + ADSENSE_ACCOUNT + '" crossorigin="anonymous"></script>';
+const ADSENSE_LOADER_MARKER = 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
 const UET_SCRIPT = '<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[];f=function(){var o={ti:"187285081",enableAutoSpaTracking:true};o.q=w[u];w[u]=new UET(o);w[u].push("pageLoad")};n=d.createElement(t);n.src=r;n.async=1;n.onload=n.onreadystatechange=function(){var s=this.readyState;if(s&&s!=="loaded"&&s!=="complete")return;f();n.onload=n.onreadystatechange=null};i=d.getElementsByTagName(t)[0];i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>';
 const UET_MARKER = 'bat.bing.com/bat.js';
 const SERVICE_VIEW_TRACKING_SCRIPT = '<script src="/service-view-tracking.js" defer></script>';
@@ -105,10 +107,11 @@ export async function onRequest(context) {
   if (isStandardHtml) {
     let html = await output.text();
 
-    // Static pages may contain an eager AdSense tag. Remove it at the edge and
-    // retain the publisher meta tag so the initial page stays lightweight.
-    html = html.replace(/<script[^>]+pagead\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js[^>]*><\/script>/gi, '');
     if (monetized && !html.includes('google-adsense-account')) html = insertAfterHeadOpen(html, ADSENSE_META);
+    // AdSense monetization: every monetized page must carry the standard
+    // loader (estate pattern, same as United). Inject it at the edge when the
+    // static page does not already include it.
+    if (monetized && !html.includes(ADSENSE_LOADER_MARKER)) html = insertAfterHeadOpen(html, ADSENSE_LOADER);
     if (monetized && !html.includes(CONSENT_MARKER)) html = insertAfterHeadOpen(html, CONSENT_DEFAULT_SCRIPT);
     // GA4 is intentionally loaded even while analytics_storage is denied.
     // Consent Mode blocks storage/measurement until the visitor grants it,
